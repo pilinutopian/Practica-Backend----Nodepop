@@ -23,10 +23,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// rutas API
+// API routes
 app.use('/api/anuncios', require('./routes/api/anuncios'));
 
-// rutas web
+// WEB routes
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
@@ -49,7 +49,7 @@ app.use(function(err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
 
-  // si es una petición al API, responder con formato JSON
+  // si es petición al API, responder en formato JSON
   if (req.originalUrl.startsWith('/api/')) {
     res.json({ error: err.message });
     return;

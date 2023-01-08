@@ -2,7 +2,7 @@
 
 const mongoose = require('mongoose');
 
-// definimos el esquema de los anuncios
+// esquema de aununcios
 const anuncioSchema = mongoose.Schema({
   name: { type: String, index: true },
   venta: Boolean,
@@ -11,7 +11,7 @@ const anuncioSchema = mongoose.Schema({
   tags: { type: [String], index: true }
 }, { collection: 'anuncios' });
 
-// creamos un método estático
+// crea static method
 anuncioSchema.statics.listar = function(filtro, skip, limit, fields, sort) {
   const query = Anuncio.find(filtro);
   query.skip(skip);
@@ -21,7 +21,7 @@ anuncioSchema.statics.listar = function(filtro, skip, limit, fields, sort) {
   return query.exec();
 };
 
-// creamos el modelo
+// crea el modelo de anuncio  
 const Anuncio = mongoose.model('Anuncio', anuncioSchema);
 
 // exportar el modelo
