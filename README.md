@@ -2,23 +2,23 @@
 
 Backend para dar soporte a una aplicación de venta de artículos de segunda mano.
 
-## Instrucciones
+### Inicializar:
 
-Requisitos de instalación:
+npm install
 
-- Node
-- MongoDB
+### Cargar la data a la base de datos:
 
-### Instalación
+npm run init-db
 
-    $ npm install
+### Lanzar la aplicación en desarrollo:
 
+npm run dev
 
-### Arrancar servidor
+### Lanzar la aplicación en producción:
 
-    $ npm start
+npm start
 
+## Ejemplos
 
-### Arrancar la base de datos
-
-    $ npm run installDB
+http://localhost:3000/images/bicicleta.jpeg
+http://localhost:3000/images/iphone.jpeg
