@@ -7,7 +7,7 @@ const Anuncio = require('./models/Anuncio');
 
 async function main() {
 
-  const continuar = await preguntaSiNo('Estás seguro que quieres borrar la base de datos? [s/n]')
+  const continuar = await preguntaSiNo('Estás seguro que quieres borrar la base de datos? [si/no]')
   if (!continuar) {
     process.exit();
   }

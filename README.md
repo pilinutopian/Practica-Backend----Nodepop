@@ -18,7 +18,11 @@ npm run dev
 
 npm start
 
-## Ejemplos
+## Ejemplos de filtros:
 
-http://localhost:3000/images/bicicleta.jpeg
-http://localhost:3000/images/iphone.jpeg
+Para obtener imagen: http://localhost:3000/images/iphone.jpeg
+Para filtrar por nombre: http://localhost:3000/api/anuncios?fields=name
+Para filtrar por venta http://localhost:3000/api/anuncios?venta=true
+Para filtrar por tag: http://localhost:3000/api/anuncios?tags=mobile
+Paginación: http://localhost:3000/api/anuncios?skip=1&limit=1
+Para filtrar por campo: http://localhost:3000/api/anuncios?fields=price
